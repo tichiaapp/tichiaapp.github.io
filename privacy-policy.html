@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — TiChia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #f8f7f4;
+            --color-surface: #ffffff;
+            --color-text: #1a1a1a;
+            --color-text-secondary: #5c5c5c;
+            --color-text-muted: #8a8a8a;
+            --color-accent: #2d6a4f;
+            --color-accent-light: #40916c;
+            --color-border: #e8e6e1;
+            --color-highlight: #d8f3dc;
+            --font-display: 'Fraunces', Georgia, serif;
+            --font-body: 'Source Sans 3', -apple-system, sans-serif;
+            --shadow-soft: 0 2px 8px rgba(0,0,0,0.04), 0 4px 24px rgba(0,0,0,0.06);
+            --shadow-card: 0 1px 3px rgba(0,0,0,0.02), 0 8px 32px rgba(0,0,0,0.05);
+            --radius: 16px;
+            --radius-sm: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            font-size: 17px;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+        }
+
+        /* Subtle texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.02;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            padding: 48px 0 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo-mark {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, #1e5c45 0%, #2d7a5a 50%, #3d9970 100%);
+            border-radius: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(45, 106, 79, 0.3);
+        }
+
+        .logo-mark svg {
+            width: 36px;
+            height: 36px;
+            fill: white;
+        }
+
+        .brand-name {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: var(--color-text);
+            margin-bottom: 4px;
+        }
+
+        header p {
+            color: var(--color-text-muted);
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        /* Main content */
+        main {
+            padding-bottom: 80px;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 48px;
+            padding-top: 24px;
+        }
+
+        .policy-header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 6vw, 44px);
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            color: var(--color-text);
+            margin-bottom: 16px;
+            line-height: 1.15;
+        }
+
+        .policy-header h1 em {
+            font-style: italic;
+            color: var(--color-accent);
+        }
+
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--color-surface);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            color: var(--color-text-secondary);
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--color-border);
+        }
+
+        .last-updated::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--color-accent);
+            border-radius: 50%;
+        }
+
+        /* Intro section */
+        .intro {
+            background: var(--color-surface);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--color-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+        }
+
+        .intro strong {
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        /* Policy sections */
+        .policy-section {
+            background: var(--color-surface);
+            border-radius: var(--radius);
+            padding: 0;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--color-border);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .policy-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 28px 28px 0;
+        }
+
+        .section-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background: var(--color-highlight);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--color-accent);
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        .section-number {
+            font-family: var(--font-display);
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 4px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 22px;
+            font-weight: 500;
+            color: var(--color-text);
+            letter-spacing: -0.02em;
+        }
+
+        .section-content {
+            padding: 20px 28px 28px;
+            padding-left: 96px;
+        }
+
+        .section-content p {
+            color: var(--color-text-secondary);
+            line-height: 1.75;
+        }
+
+        .section-content .highlight {
+            background: linear-gradient(120deg, var(--color-highlight) 0%, transparent 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+            color: var(--color-accent);
+        }
+
+        /* Commitment banner */
+        .commitment {
+            background: linear-gradient(135deg, var(--color-accent) 0%, #1b4332 100%);
+            border-radius: var(--radius);
+            padding: 40px 32px;
+            margin: 48px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .commitment::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: shimmer 8s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .commitment h2 {
+            font-family: var(--font-display);
+            font-size: 26px;
+            font-weight: 400;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .commitment p {
+            font-size: 16px;
+            opacity: 0.9;
+            position: relative;
+            max-width: 480px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Contact section */
+        .contact {
+            text-align: center;
+            padding: 48px 0;
+            border-top: 1px solid var(--color-border);
+            margin-top: 48px;
+        }
+
+        .contact h3 {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--color-text);
+            margin-bottom: 8px;
+        }
+
+        .contact p {
+            color: var(--color-text-muted);
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--color-surface);
+            padding: 14px 24px;
+            border-radius: 100px;
+            color: var(--color-accent);
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--color-border);
+            transition: all 0.2s ease;
+        }
+
+        .contact-email:hover {
+            background: var(--color-accent);
+            color: white;
+            border-color: var(--color-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(45, 106, 79, 0.3);
+        }
+
+        .contact-email svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            fill: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 32px 0 48px;
+            color: var(--color-text-muted);
+            font-size: 14px;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        footer .copyright {
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            header {
+                padding: 32px 0 24px;
+            }
+
+            .logo-mark {
+                width: 48px;
+                height: 48px;
+                border-radius: 12px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                gap: 16px;
+                padding: 24px 24px 0;
+            }
+
+            .section-content {
+                padding: 16px 24px 24px;
+            }
+
+            .intro {
+                padding: 24px;
+            }
+
+            .commitment {
+                padding: 32px 24px;
+            }
+        }
+
+        /* Animation on scroll */
+        .policy-section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        .policy-section:nth-child(1) { animation-delay: 0.1s; }
+        .policy-section:nth-child(2) { animation-delay: 0.2s; }
+        .policy-section:nth-child(3) { animation-delay: 0.3s; }
+        .policy-section:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .intro {
+            opacity: 0;
+            animation: fadeUp 0.6s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-name">TiChia</div>
+            <p>Your Trail, Your Privacy</p>
+        </header>
+
+        <main>
+            <div class="policy-header">
+                <h1>Privacy <em>Policy</em></h1>
+                <div class="last-updated">Last updated: December 26, 2025</div>
+            </div>
+
+            <div class="intro">
+                <p>
+                    At <strong>TiChia</strong>, your privacy is our priority. This policy explains how we handle your data with complete transparency. We believe you should have <strong>full control</strong> over your personal information.
+                </p>
+            </div>
+
+            <div class="policy-sections">
+                <article class="policy-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="10" r="3"/>
+                                <path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="section-number">Section 01</div>
+                            <h2 class="section-title">Data Collection</h2>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <p>
+                            TiChia accesses your location data (GPS coordinates) <span class="highlight">solely</span> to provide the core functionality of logging and mapping your work activities. We only collect what's necessary to deliver the service you expect.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="policy-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="16" rx="2"/>
+                                <path d="M9 10h6M9 14h4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="section-number">Section 02</div>
+                            <h2 class="section-title">Data Storage</h2>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <p>
+                            All your location logs, notes, and photos are stored <span class="highlight">entirely on your device</span>. TiChia has <strong>no servers</strong>—we never receive, store, or have access to your data. It physically never leaves your device.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="policy-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="section-number">Section 03</div>
+                            <h2 class="section-title">Information Sharing</h2>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <p>
+                            Since your data never reaches us, there is <span class="highlight">nothing to sell or share</span>. We cannot access, trade, or transfer your information—because we simply don't have it.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="policy-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="8" r="4"/>
+                                <path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="section-number">Section 04</div>
+                            <h2 class="section-title">User Control</h2>
+                        </div>
+                    </div>
+                    <div class="section-content">
+                        <p>
+                            You can manage or delete your location data within the app <span class="highlight">at any time</span>. We provide you with complete control over your information—no hidden data, no complications.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="commitment">
+                <h2>Our Commitment to You</h2>
+                <p>
+                    Privacy isn't just a policy—it's a promise. We built TiChia with privacy-first principles because we believe your data belongs to you.
+                </p>
+            </div>
+
+            <div class="contact">
+                <h3>Questions?</h3>
+                <p>We're happy to explain anything about our privacy practices.</p>
+                <a href="mailto:privacy@tichia.app" class="contact-email">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="M22 6l-10 7L2 6"/>
+                    </svg>
+                    tichiaapp@outlook.com
+                </a>
+            </div>
+        </main>
+
+        <footer>
+            <p>TiChia — Your Trail, Your Privacy</p>
+            <p class="copyright">© 2025 TiChia. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
